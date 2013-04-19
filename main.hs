@@ -5,7 +5,6 @@ main = do
     text <- readFile "field.txt"
     let f = parseField text
     putStr $ printField f
-    putStr "\n"
 
     runGame f
 
@@ -14,7 +13,6 @@ runGame f = do
     l <- getLine
     let f2 = nextState f
     putStr $ printField f2
-    putStr "\n"
     runGame f2
         
 

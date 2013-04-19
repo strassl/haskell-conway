@@ -11,7 +11,7 @@ type Row = [Cell]
 type Field = [Row]
 
 instance Show Cell where
-    show (Cell alive x y) = if alive then "1" else "0"
+    show (Cell alive x y) = if alive then "o" else " "
 
 nextState :: Field -> Field
 nextState f = map (processRow f) rows
